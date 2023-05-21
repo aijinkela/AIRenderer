@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Rendering;
 
-namespace FernNPRCore.StableDiffusionGraph
+namespace SDGraphCore.StableDiffusionGraph
 {
     
     /// <summary>

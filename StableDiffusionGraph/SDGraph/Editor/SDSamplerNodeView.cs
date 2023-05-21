@@ -4,7 +4,7 @@ using FernGraph.Editor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace FernNPRCore.StableDiffusionGraph
+namespace SDGraphCore.StableDiffusionGraph
 {
     [CustomNodeView(typeof(SDSamplerNode))]
     public class SDSamplerNodeView : NodeView

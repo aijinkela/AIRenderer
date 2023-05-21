@@ -2,7 +2,7 @@
 using UnityEditor;
 #endif
 using UnityEngine;
-namespace FernNPRCore.StableDiffusionGraph
+namespace SDGraphCore.StableDiffusionGraph
 {
     [CreateAssetMenu(fileName = "SDDataHandle", menuName = "FernGraph/SDDataHandle")]
     public class SDDataHandle : ScriptableObject

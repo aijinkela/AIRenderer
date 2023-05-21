@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace FernNPRCore.StableDiffusionGraph.SDGraph
+namespace SDGraphCore.StableDiffusionGraph.SDGraph
 {
     [CustomEditor(typeof(InpaintHelper))]
     public class InpaintHelperEditor : Editor

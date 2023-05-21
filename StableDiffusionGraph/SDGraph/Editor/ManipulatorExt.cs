@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 
-namespace FernNPRCore.StableDiffusionGraph
+namespace SDGraphCore.StableDiffusionGraph
 {
     public class SquareResizer : MouseManipulator
     {

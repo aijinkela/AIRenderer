@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace FernNPRCore.StableDiffusionGraph
+namespace SDGraphCore.StableDiffusionGraph
 {
     public class SDTextureHandle
     {

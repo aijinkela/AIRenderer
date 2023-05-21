@@ -11,7 +11,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace FernNPRCore.StableDiffusionGraph
+namespace SDGraphCore.StableDiffusionGraph
 {
     [Node(Path = "SD Standard")]
     [Tags("SD Node")]

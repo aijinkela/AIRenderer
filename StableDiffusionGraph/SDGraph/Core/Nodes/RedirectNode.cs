@@ -1,6 +1,6 @@
 using FernGraph;
 
-namespace FernNPRCore.StableDiffusionGraph
+namespace SDGraphCore.StableDiffusionGraph
 {
     public class RedirectNode22 : Node
     {

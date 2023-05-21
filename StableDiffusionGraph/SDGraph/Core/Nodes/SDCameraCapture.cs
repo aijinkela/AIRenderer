@@ -4,7 +4,7 @@ using FernGraph;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 
-namespace FernNPRCore.StableDiffusionGraph
+namespace SDGraphCore.StableDiffusionGraph
 {
     [Node(Path = "SD Standard")]
     [Tags("SD Node")]

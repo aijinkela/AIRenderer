@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace FernNPRCore.StableDiffusionGraph
+namespace SDGraphCore.StableDiffusionGraph
 {
     [CustomNodeView(typeof(SDImg2ImgNode))]
     public class SDImg2ImgNodeView : NodeView
