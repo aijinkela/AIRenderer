@@ -149,14 +149,14 @@ MonoBehaviour:
             portName: Seed
         Image: {fileID: 0}
         OutImage: {fileID: 0}
-        seed: 8260116632511094829
+        seed: 4307788239423351526
     - rid: 3111906461559816202
       type: {class: SDCameraCapture, ns: SDGraphCore.StableDiffusionGraph, asm: Assembly-CSharp}
       data:
         id: 9b12a4fb-f88b-4c52-963a-5c27488d7cec
         name: SD Camera Capture
         graph: {fileID: 11400000}
-        position: {x: -184.99992, y: -401.94037}
+        position: {x: -279.0975, y: -347.4875}
         ports:
         - name: Capture
           type: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
@@ -169,7 +169,7 @@ MonoBehaviour:
         Capture: {fileID: 0}
         currentCamere: {fileID: 0}
         cameraRT: {fileID: 0}
-        enableUpdate: 1
+        enableUpdate: 0
     - rid: 3111906461559816203
       type: {class: SDImg2ImgNode, ns: SDGraphCore.StableDiffusionGraph, asm: Assembly-CSharp}
       data:
@@ -256,13 +256,13 @@ MonoBehaviour:
           - nodeId: 684af930-d1d5-4d15-850c-f2c14e2c1772
             portName: SDFlowOut
         InputImage: {fileID: 0}
-        OutScale: 0.5
+        OutScale: 0.25
         MaskImage: {fileID: 0}
         Step: 20
         CFG: 7
         DenisoStrength: 0.75
         OutputImage: {fileID: 0}
-        outSeed: 8260116632511094829
+        outSeed: 4307788239423351526
         Seed: -1
         SamplerMethod: Euler
         inpainting_fill: 0
