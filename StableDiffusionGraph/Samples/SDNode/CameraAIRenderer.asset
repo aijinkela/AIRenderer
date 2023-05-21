@@ -125,7 +125,7 @@ MonoBehaviour:
         id: 83b281f5-f4fb-4dab-b798-473a200da293
         name: SD Preview
         graph: {fileID: 11400000}
-        position: {x: 812.47815, y: -375.54773}
+        position: {x: 856.2251, y: -243.4999}
         ports:
         - name: In Image
           type: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
@@ -150,7 +150,7 @@ MonoBehaviour:
             portName: Seed
         Image: {fileID: 0}
         OutImage: {fileID: 0}
-        seed: 4479893383254083767
+        seed: 5175476687500698682
     - rid: 3111906461559816209
       type: {class: SDSamplerNode, ns: SDGraphCore.StableDiffusionGraph, asm: Assembly-CSharp}
       data:
@@ -217,7 +217,7 @@ MonoBehaviour:
         Step: 20
         CFG: 7
         OutputImage: {fileID: 0}
-        outSeed: 4479893383254083767
+        outSeed: 5175476687500698682
         Seed: -1
         SamplerMethod: Euler
     - rid: 3111906461559816210
