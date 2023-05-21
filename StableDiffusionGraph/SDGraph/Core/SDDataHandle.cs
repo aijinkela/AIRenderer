@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 namespace SDGraphCore.StableDiffusionGraph
 {
-    [CreateAssetMenu(fileName = "SDDataHandle", menuName = "FernGraph/SDDataHandle")]
+    [CreateAssetMenu(fileName = "SDDataHandle", menuName = "AIRenderer/SDDataHandle")]
     public class SDDataHandle : ScriptableObject
     {
         private static SDDataHandle instance = null;
@@ -12,8 +12,8 @@ namespace SDGraphCore.StableDiffusionGraph
         {
             get
             {
-                if (instance == null)
-                {
+                // if (instance == null)
+                // {
                     instance = Resources.Load<SDDataHandle>("SDDataHandle");
 #if UNITY_EDITOR
                     if (instance == null)
@@ -23,7 +23,7 @@ namespace SDGraphCore.StableDiffusionGraph
                         AssetDatabase.SaveAssets();
                     }
 #endif
-                }
+                // }
                 return instance;
             }
         }

@@ -18,6 +18,7 @@ namespace SDGraphCore.StableDiffusionGraph
     public class SDImg2ImgNode : SDFlowNode, ICanExecuteSDFlow
     {
         [Input("In Image")] public Texture2D InputImage;
+        [Input("Out Scale")] public float OutScale = 1.0f;
         [Input("Mask")] public Texture2D MaskImage;
         [Input("ControlNet")] public ControlNetData controlNetData;
         [Input] public Prompt Prompt;
@@ -143,8 +144,8 @@ namespace SDGraphCore.StableDiffusionGraph
                         sd.steps = Step;
                         sd.cfg_scale = CFG;
                         sd.denoising_strength = DenisoStrength;
-                        sd.width = Screen.width;
-                        sd.height = Screen.height;
+                        sd.width =  Mathf.RoundToInt(InputImage.width * OutScale);
+                        sd.height = Mathf.RoundToInt(InputImage.height * OutScale);
                         sd.seed = seed;
                         sd.tiling = false;
                         sd.sampler_name = SamplerMethod;
@@ -163,8 +164,8 @@ namespace SDGraphCore.StableDiffusionGraph
                         sd.steps = Step;
                         sd.cfg_scale = CFG;
                         sd.denoising_strength = DenisoStrength;
-                        sd.width = Screen.width;
-                        sd.height = Screen.height;
+                        sd.width =  Mathf.RoundToInt(InputImage.width * OutScale);
+                        sd.height = Mathf.RoundToInt(InputImage.height * OutScale);
                         sd.seed = seed;
                         sd.tiling = false;
                         sd.sampler_name = SamplerMethod;
@@ -192,8 +193,12 @@ namespace SDGraphCore.StableDiffusionGraph
                         sd.steps = Step;
                         sd.cfg_scale = CFG;
                         sd.denoising_strength = DenisoStrength;
-                        sd.width = Screen.width;
-                        sd.height = Screen.height;
+                        // sd.width = Screen.width;
+                        // sd.height = Screen.height;
+
+                        sd.width =  Mathf.RoundToInt(InputImage.width * OutScale);
+                        sd.height = Mathf.RoundToInt(InputImage.height * OutScale);
+
                         sd.seed = seed;
                         sd.tiling = false;
                         sd.sampler_name = SamplerMethod;
@@ -207,12 +212,13 @@ namespace SDGraphCore.StableDiffusionGraph
 
 
 
-
+                         Debug.Log(sd.width + "x" + sd.height);
 
 
                         json = JsonConvert.SerializeObject(sd);
                     }
                     
+                    // Debug.Log(Screen.width + "x" + Screen.height);
                     // Send to the server
                     streamWriter.Write(json);
                 }
@@ -221,7 +227,7 @@ namespace SDGraphCore.StableDiffusionGraph
             // {
             //     SDUtil.LogError(e.Message + "\n\n" + e.StackTrace);
             // }
-
+  
             // Read the output of generation
             if (httpWebRequest != null)
             {
@@ -239,7 +245,7 @@ namespace SDGraphCore.StableDiffusionGraph
                 }
 
                 // Stream the result from the server
-                var httpResponse = webResponse.Result;
+/*  */                var httpResponse = webResponse.Result;
 
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {

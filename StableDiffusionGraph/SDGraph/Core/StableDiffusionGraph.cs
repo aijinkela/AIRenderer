@@ -39,7 +39,7 @@ namespace SDGraphCore.StableDiffusionGraph
     }
     
     [CreateAssetMenu(
-        menuName = "FernGraph/AI/FernUI", 
+        menuName = "AIRenderer/SDNode", 
         fileName = "New SD Graph"
     )]
     [IncludeTags("Math", "Executable", "Flow Control", "SD Events", "SD Config", "SD Node")]
