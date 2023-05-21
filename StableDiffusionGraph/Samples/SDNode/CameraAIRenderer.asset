@@ -97,7 +97,7 @@ MonoBehaviour:
         id: c252abd4-b841-44c8-9fb8-9d2e64ea6f9e
         name: SD Prompt
         graph: {fileID: 11400000}
-        position: {x: -209, y: -7}
+        position: {x: 120, y: -2.5}
         ports:
         - name: Positive
           type: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -117,7 +117,7 @@ MonoBehaviour:
           connections:
           - nodeId: 7ba1a3a5-1364-4d3c-a991-7e7c8d97125d
             portName: Prompt
-        Positive: room
+        Positive: "\u623F\u95F4\uFF0C\u5973\u5B69\u67DC\u53F0\u524D"
         Negative: 
     - rid: 3111906461559816200
       type: {class: SDPreview, ns: SDGraphCore.StableDiffusionGraph, asm: Assembly-CSharp}
@@ -125,7 +125,7 @@ MonoBehaviour:
         id: 83b281f5-f4fb-4dab-b798-473a200da293
         name: SD Preview
         graph: {fileID: 11400000}
-        position: {x: 850.5, y: -153.5}
+        position: {x: 812.47815, y: -375.54773}
         ports:
         - name: In Image
           type: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
@@ -150,7 +150,7 @@ MonoBehaviour:
             portName: Seed
         Image: {fileID: 0}
         OutImage: {fileID: 0}
-        seed: 0
+        seed: 4479893383254083767
     - rid: 3111906461559816209
       type: {class: SDSamplerNode, ns: SDGraphCore.StableDiffusionGraph, asm: Assembly-CSharp}
       data:
@@ -217,7 +217,7 @@ MonoBehaviour:
         Step: 20
         CFG: 7
         OutputImage: {fileID: 0}
-        outSeed: 0
+        outSeed: 4479893383254083767
         Seed: -1
         SamplerMethod: Euler
     - rid: 3111906461559816210
@@ -226,7 +226,7 @@ MonoBehaviour:
         id: cfce8205-a55f-4d00-9ca7-3bc600e4a4c6
         name: SD Camera Capture
         graph: {fileID: 11400000}
-        position: {x: -355, y: -350.99997}
+        position: {x: -285.29224, y: -174.49997}
         ports:
         - name: Capture
           type: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
@@ -322,4 +322,4 @@ MonoBehaviour:
         - reference_adain
         - reference_adain+attn
         - inpaint
-        currentIndex: 0
+        currentIndex: 3
