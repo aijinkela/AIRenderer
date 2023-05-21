@@ -19,6 +19,7 @@ MonoBehaviour:
   - rid: 3111906461559816200
   - rid: 3111906461559816209
   - rid: 3111906461559816210
+  - rid: 3111906461559816212
   comments: []
   assetVersion: 1
   references:
@@ -177,7 +178,9 @@ MonoBehaviour:
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
           capacity: 0
           direction: 0
-          connections: []
+          connections:
+          - nodeId: d92a9f66-f541-4e66-8380-74619ed90baa
+            portName: ControlNet
         - name: Step
           type: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           capacity: 0
@@ -230,8 +233,93 @@ MonoBehaviour:
             PublicKeyToken=null
           capacity: 1
           direction: 1
-          connections: []
+          connections:
+          - nodeId: d92a9f66-f541-4e66-8380-74619ed90baa
+            portName: Image
         Capture: {fileID: 0}
         currentCamere: {fileID: 0}
         cameraRT: {fileID: 0}
         enableUpdate: 1
+    - rid: 3111906461559816212
+      type: {class: SDControlNet, ns: SDGraphCore.StableDiffusionGraph, asm: Assembly-CSharp}
+      data:
+        id: d92a9f66-f541-4e66-8380-74619ed90baa
+        name: SD Control Net
+        graph: {fileID: 11400000}
+        position: {x: 110.681854, y: -174.42532}
+        ports:
+        - name: Image
+          type: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+          capacity: 0
+          direction: 0
+          connections:
+          - nodeId: cfce8205-a55f-4d00-9ca7-3bc600e4a4c6
+            portName: Capture
+        - name: ControlNet
+          type: SDGraphCore.StableDiffusionGraph.ControlNetData, Assembly-CSharp,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+          capacity: 1
+          direction: 1
+          connections:
+          - nodeId: 7ba1a3a5-1364-4d3c-a991-7e7c8d97125d
+            portName: ControlNet
+        InputImage: {fileID: 0}
+        modelNames:
+        - control_v11e_sd15_ip2p [c4bb465c]
+        - control_v11e_sd15_shuffle [526bfdae]
+        - control_v11f1e_sd15_tile [a371b31b]
+        - control_v11f1p_sd15_depth [cfd03158]
+        - control_v11p_sd15_canny [d14c016b]
+        - control_v11p_sd15_inpaint [ebff9138]
+        - control_v11p_sd15_lineart [43d4be0d]
+        - control_v11p_sd15_mlsd [aca30ff0]
+        - control_v11p_sd15_normalbae [316696f1]
+        - control_v11p_sd15_openpose [cab727d4]
+        - control_v11p_sd15_scribble [d4ba51ff]
+        - control_v11p_sd15_seg [e1f51eb9]
+        - control_v11p_sd15_softedge [a8575a2a]
+        - control_v11p_sd15s2_lineart_anime [3825e83e]
+        moduleNames:
+        - none
+        - canny
+        - depth
+        - depth_leres
+        - depth_leres++
+        - hed
+        - hed_safe
+        - mediapipe_face
+        - mlsd
+        - normal_map
+        - openpose
+        - openpose_hand
+        - openpose_face
+        - openpose_faceonly
+        - openpose_full
+        - clip_vision
+        - color
+        - pidinet
+        - pidinet_safe
+        - pidinet_sketch
+        - pidinet_scribble
+        - scribble_xdog
+        - scribble_hed
+        - segmentation
+        - threshold
+        - depth_zoe
+        - normal_bae
+        - oneformer_coco
+        - oneformer_ade20k
+        - lineart
+        - lineart_coarse
+        - lineart_anime
+        - lineart_standard
+        - shuffle
+        - tile_resample
+        - invert
+        - lineart_anime_denoise
+        - reference_only
+        - reference_adain
+        - reference_adain+attn
+        - inpaint
+        currentIndex: 0

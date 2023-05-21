@@ -429,11 +429,11 @@ namespace SDGraphCore.StableDiffusionGraph
         public string module = "none";
         public string model;
         public float weight = 1;
-        public string resize_mode = "Resize and Fill";
+        public string resize_mode = "Crop and Resize";
         public bool lowvram = false;
         public int processor_res = 512;
-        public int threshold_a = 64;
-        public int threshold_b = 64;
+        public int threshold_a = 0;
+        public int threshold_b = 0;
         public float guidance_start = 0.0f;
         public float guidance_end = 1.0f;
         public float guidance = 1f;
